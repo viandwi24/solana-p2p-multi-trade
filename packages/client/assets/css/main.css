@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+  --width-screen-sm: var(--breakpoint-sm);
+  --width-screen-md: var(--breakpoint-md);
+  --width-screen-lg: var(--breakpoint-lg);
+  --width-screen-xl: var(--breakpoint-xl);
+  --width-screen-2xl: var(--breakpoint-2xl);
+}
+
+/* SOLANA ADAPTER */
+.swv-button-trigger.swv-button {
+  height: 32px !important;
+  line-height: 32px !important;
+  padding: 0 6px !important;
+  font-size: 12px !important;
+  border-radius: 4px !important;
+
+  .swv-button-icon {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  & > * + * {
+    margin-left: 6px !important;
+  }
+}

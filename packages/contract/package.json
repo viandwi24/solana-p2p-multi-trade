@@ -1,0 +1,27 @@
+{
+  "name": "contract",
+  "license": "ISC",
+  "scripts": {
+    "localnet": "solana-test-validator --bind-address 0.0.0.0 --rpc-port 8899 && solana --url http://localhost:8899 -k ~/.config/solana/dev.json airdrop 100",
+    "localnet:reset": "rm -rf test-ledger ledger",
+    "lint:fix": "prettier */*.js \"*/**/*{.js,.ts}\" -w",
+    "lint": "prettier */*.js \"*/**/*{.js,.ts}\" --check"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "0.28.0",
+    "@coral-xyz/borsh": "0.28.0",
+    "@types/bun": "^1.1.14",
+    "borsh-latest": "npm:borsh@latest",
+    "consola": "^3.2.3"
+  },
+  "devDependencies": {
+    "chai": "^5.1.2",
+    "mocha": "^9.0.3",
+    "ts-mocha": "^10.0.0",
+    "@types/bn.js": "^5.1.0",
+    "@types/chai": "^5.0.1",
+    "@types/mocha": "^10.0.10",
+    "typescript": "^4.3.5",
+    "prettier": "^2.6.2"
+  }
+}
